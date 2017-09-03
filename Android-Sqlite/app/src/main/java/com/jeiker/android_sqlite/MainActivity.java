@@ -1,5 +1,6 @@
 package com.jeiker.android_sqlite;
 
+import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -70,5 +71,43 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         Toast.makeText(this, "数据库操作成功！", Toast.LENGTH_LONG).show();
+    }
+
+    /**
+     * 点击插入数据 API
+     * @param view
+     */
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_insertApi:
+                SQLiteDatabase db = helper.getWritableDatabase();
+
+                ContentValues values = new ContentValues();
+                values.put(Constant._ID, 3);
+                values.put(Constant.NAME, "晓");
+                values.put(Constant.AGE, 25);
+                long result = db.insert(Constant.TABLE_NAME, null, values);
+                if (result > 0) {
+                    Toast.makeText(MainActivity.this, "插入数据成功！", Toast.LENGTH_LONG).show();
+                }else {
+                    Toast.makeText(MainActivity.this, "插入数据失败！", Toast.LENGTH_LONG).show();
+                }
+                db.close();
+                break;
+            case R.id.btn_updateApi:
+                db = helper.getWritableDatabase();
+                /**
+                 * update(String table, ContentValues values, String whereClause, String[] whereArgs)
+                 * String table         表示修改的数据库表名
+                 * ContentValues values 表示键为String 类型的 hashmap
+                 * String whereClause   表示修改条件
+                 * String[] whereArgs   表示修改条件的占位符
+                 */
+                ContentValues values1 = new ContentValues();
+                values1.put(Constant.NAME, "月");
+                int resutl = db.update(Constant.TABLE_NAME, values1, Constant._ID + "=?", new String[]{"3"});
+                db.close();
+                break;
+        }
     }
 }

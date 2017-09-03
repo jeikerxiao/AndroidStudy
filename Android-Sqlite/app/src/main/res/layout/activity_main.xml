@@ -44,4 +44,32 @@
         android:background="#ffbbff"
         android:layout_marginTop="15dp"/>
 
+    <Button
+        android:id="@+id/btn_insertApi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="插入数据Api"
+        android:onClick="onClick"
+        android:background="#ffbbff"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/btn_updateApi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改数据Api"
+        android:onClick="onClick"
+        android:background="#ffbbff"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/btn_deleteApi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="删除数据Api"
+        android:onClick="onClick"
+        android:background="#ffbbff"
+        android:layout_marginTop="15dp"/>
+
+
 </LinearLayout>
