@@ -24,20 +24,20 @@ public class FileHelper {
     }
 
     /**
-     * 这里定义的是一个文件保存的方法，写入到文件中，所以是输出流
+     * 文件写入的方法，写入到文件中，所以是输出流
      * @param filename
-     * @param filecontent
+     * @param fileContent
      * @throws Exception
      */
-    public void save(String filename, String filecontent) throws Exception {
+    public void save(String filename, String fileContent) throws Exception {
         //这里我们使用私有模式,创建出来的文件只能被本应用访问,还会覆盖原文件哦
         FileOutputStream output = mContext.openFileOutput(filename, Context.MODE_PRIVATE);
-        output.write(filecontent.getBytes());  //将String字符串以字节流的形式写入到输出流中
-        output.close();         //关闭输出流
+        output.write(fileContent.getBytes());   //将String字符串以字节流的形式写入到输出流中
+        output.close();                         //关闭输出流
     }
 
     /**
-     * 这里定义的是文件读取的方法
+     * 文件读取的方法
      * @param filename
      * @return
      * @throws IOException
