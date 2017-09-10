@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Android-Service2</string>
+
+    <string name="btnBind">绑定服务</string>
+    <string name="btnCancel">取消绑定</string>
+    <string name="btnStatus">服务状态</string>
 </resources>

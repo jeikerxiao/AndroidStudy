@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".TestService2" android:exported="false">
+            <intent-filter>
+                <action android:name="com.jeiker.android_service2.TEST_SERVICE2"/>
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>
