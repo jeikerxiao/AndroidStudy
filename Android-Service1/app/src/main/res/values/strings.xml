@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android-Service1</string>
+    <string name="btnStart">开始服务</string>
+    <string name="btnStop">结束服务</string>
 </resources>

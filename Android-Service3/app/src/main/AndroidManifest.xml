@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 配置Service组件,同时配置一个action -->
+        <service android:name=".TestService1">
+            <intent-filter>
+                <action android:name="com.jeiker.android_service.TEST_SERVICE1"/>
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>
