@@ -18,9 +18,9 @@
         </activity>
 
         <!-- 配置Service组件,同时配置一个action -->
-        <service android:name=".TestService1">
-            <intent-filter>
-                <action android:name="com.jeiker.android_service.TEST_SERVICE1"/>
+        <service android:name=".TestService3" android:exported="false">
+            <intent-filter >
+                <action android:name="com.jeiker.android_service3.intentservice"/>
             </intent-filter>
         </service>
 
