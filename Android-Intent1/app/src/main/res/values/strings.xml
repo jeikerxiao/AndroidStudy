@@ -2,4 +2,10 @@
     <string name="app_name">Android-Intent1</string>
     <string name="btn_go_home">跳转到首页</string>
     <string name="btn_go_baidu">跳转到百度</string>
+    <string name="btn_go_phone">打电话</string>
+    <string name="btn_send_message">发短信</string>
+    <string name="btn_send_image_message">发彩信</string>
+    <string name="btn_go_map">看地图</string>
+    <string name="btn_record_sound">录音器</string>
+    <string name="btn_go_settings">设置</string>
 </resources>
