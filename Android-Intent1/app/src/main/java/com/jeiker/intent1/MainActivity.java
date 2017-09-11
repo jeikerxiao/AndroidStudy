@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void goMap() {
-        //6.显示地图:
+        //4.显示地图:
         // 打开Google地图中国北京位置（北纬39.9，东经116.3）
         Uri uri = Uri.parse("geo:39.9,116.3");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -137,13 +137,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void recordSound() {
-        //21.打开录音机
+        //5.打开录音机
         Intent mi = new Intent(MediaStore.Audio.Media.RECORD_SOUND_ACTION);
         startActivity(mi);
     }
 
     private void goSettings() {
-        //12.进入手机设置界面:
+        //6.进入手机设置界面:
         // 进入无线网络设置界面（其它可以举一反三）
         Intent intent = new Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS);
         startActivityForResult(intent, 0);
