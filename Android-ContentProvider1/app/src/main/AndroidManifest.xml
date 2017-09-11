@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 读短信 -->
+        <uses-permission android:name="android.permission.READ_SMS"/>
+        <!-- 读联系人 -->
+        <uses-permission android:name="android.permission.READ_CONTACTS"/>
+        <!-- 写联系人 -->
+        <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+        <!-- 写个人资料 -->
+        <uses-permission android:name="android.permission.WRITE_PROFILE"/>
+
     </application>
 
 </manifest>
