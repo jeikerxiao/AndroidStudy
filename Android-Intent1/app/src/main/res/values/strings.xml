@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android-Intent1</string>
+    <string name="btn_go_home">跳转到首页</string>
+    <string name="btn_go_baidu">跳转到百度</string>
 </resources>
