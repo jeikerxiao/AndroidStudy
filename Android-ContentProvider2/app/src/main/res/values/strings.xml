@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android-ContentProvider2</string>
+    <string name="btn_show">显示</string>
 </resources>
