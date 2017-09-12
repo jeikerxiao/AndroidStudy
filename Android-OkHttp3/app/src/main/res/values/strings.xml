@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Android-OkHttp3</string>
+    <string name="btnSendFile">发送文件</string>
+    <string name="btnSendPost">post请求</string>
+    <string name="btnDownloadFile">下载文件</string>
+    <string name="btnSendGet">get请求</string>
+</resources>
