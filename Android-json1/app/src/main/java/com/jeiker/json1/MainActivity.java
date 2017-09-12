@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         initView();
-
-        initData();
     }
 
     private void initView() {
@@ -39,10 +37,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSimple.setOnClickListener(this);
         btnGson.setOnClickListener(this);
         btnFastjson.setOnClickListener(this);
-    }
-
-    private void initData() {
-
     }
 
     @Override
