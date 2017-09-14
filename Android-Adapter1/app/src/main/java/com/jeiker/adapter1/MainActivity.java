@@ -2,6 +2,7 @@ package com.jeiker.adapter1;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -41,6 +42,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         //创建一个simpleAdapter
         SimpleAdapter myAdapter = new SimpleAdapter(getApplicationContext(), listItem, R.layout.list_item, new String[]{"head_image", "name", "says"}, new int[]{R.id.imgtou, R.id.name, R.id.says});
         ListView listView = (ListView) findViewById(R.id.list_test);
+        //动态加载顶部View和底部View
+        final LayoutInflater inflater = LayoutInflater.from(this);
+        View headView = inflater.inflate(R.layout.view_header, null, false);
+        View footView = inflater.inflate(R.layout.view_footer, null, false);
+
+        //添加表头和表尾需要写在setAdapter方法调用之前！！！
+        listView.addHeaderView(headView);
+        listView.addFooterView(footView);
+
         listView.setAdapter(myAdapter);
         listView.setOnItemClickListener(this);
     }
