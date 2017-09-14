@@ -29,17 +29,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     private void initListView() {
-        List<Map<String, Object>> listitem = new ArrayList<>();
+        List<Map<String, Object>> listItem = new ArrayList<>();
         for (int i = 0; i < names.length; i++) {
-            Map<String, Object> showitem = new HashMap<>();
-            showitem.put("head_image", imgIds[i]);
-            showitem.put("name", names[i]);
-            showitem.put("says", says[i]);
-            listitem.add(showitem);
+            Map<String, Object> showItem = new HashMap<>();
+            showItem.put("head_image", imgIds[i]);
+            showItem.put("name", names[i]);
+            showItem.put("says", says[i]);
+            listItem.add(showItem);
         }
 
         //创建一个simpleAdapter
-        SimpleAdapter myAdapter = new SimpleAdapter(getApplicationContext(), listitem, R.layout.list_item, new String[]{"head_image", "name", "says"}, new int[]{R.id.imgtou, R.id.name, R.id.says});
+        SimpleAdapter myAdapter = new SimpleAdapter(getApplicationContext(), listItem, R.layout.list_item, new String[]{"head_image", "name", "says"}, new int[]{R.id.imgtou, R.id.name, R.id.says});
         ListView listView = (ListView) findViewById(R.id.list_test);
         listView.setAdapter(myAdapter);
         listView.setOnItemClickListener(this);
