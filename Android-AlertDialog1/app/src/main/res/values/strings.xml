@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Android-AlertDialog1</string>
+    <string name="btn_dialog1">1.显示普通的对话框</string>
+    <string name="btn_dialog2">2.显示列表的对话框</string>
+    <string name="btn_dialog3">3.显示单选的对话框</string>
+    <string name="btn_dialog4">4.显示复选的对话框</string>
 </resources>
