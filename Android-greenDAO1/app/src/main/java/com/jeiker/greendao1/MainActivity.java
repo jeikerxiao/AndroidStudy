@@ -33,8 +33,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         instances = this;
         setDatabase();
-
-//        initUser();
     }
 
     private void initView() {
@@ -95,10 +93,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public SQLiteDatabase getDb() {
         return db;
     }
-
-//    private void initUser() {
-//        mUserDao = MainActivity.getInstances().getDaoSession().getUserDao();
-//    }
 
     private void saveUser() {
         Toast.makeText(this, "新增数据===> 1:jeiker,2:xiao2,3:xiao3", Toast.LENGTH_SHORT).show();
