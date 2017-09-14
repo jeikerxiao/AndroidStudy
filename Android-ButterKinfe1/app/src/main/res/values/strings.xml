@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android-ButterKinfe1</string>
+    <string name="btn_1">按钮1</string>
+    <string name="btn_2">按钮2</string>
 </resources>
