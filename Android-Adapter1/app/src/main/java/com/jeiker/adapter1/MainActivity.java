@@ -2,16 +2,19 @@ package com.jeiker.adapter1;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     private String[] names = new String[]{"暗夜猎手 - 薇恩", "刀锋之影 - 泰隆", "疾风剑豪 - 亚索"};
     private String[] says = new String[]{"木已成舟。", "刀下生，刀下死。", "长路漫漫，唯剑作伴。"};
@@ -39,5 +42,11 @@ public class MainActivity extends AppCompatActivity {
         SimpleAdapter myAdapter = new SimpleAdapter(getApplicationContext(), listitem, R.layout.list_item, new String[]{"head_image", "name", "says"}, new int[]{R.id.imgtou, R.id.name, R.id.says});
         ListView listView = (ListView) findViewById(R.id.list_test);
         listView.setAdapter(myAdapter);
+        listView.setOnItemClickListener(this);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> view, View view1, int i, long l) {
+        Toast.makeText(this,"你点击了第" + i + "项",Toast.LENGTH_SHORT).show();
     }
 }
