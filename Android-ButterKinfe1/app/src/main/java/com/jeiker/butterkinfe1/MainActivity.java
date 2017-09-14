@@ -22,11 +22,13 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
     
-    @OnClick(R.id.btn_1) void btn1Click() {
+    @OnClick(R.id.btn_1)
+    public void btn1Click() {
         Toast.makeText(this, "按钮1点击！", Toast.LENGTH_SHORT).show();
     }
 
-    @OnClick(R.id.btn_2) void btn2Click() {
+    @OnClick(R.id.btn_2)
+    public void btn2Click() {
         Toast.makeText(this, "按钮2点击！", Toast.LENGTH_SHORT).show();
     }
 }
